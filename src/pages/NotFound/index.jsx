@@ -1,6 +1,8 @@
+import { Layoud } from "../../Layoud";
+
 const NotFound = ()=>{
     return(
-        <>Not Found</>
+        <Layoud>Not Found</Layoud>
     );
 }
 export default NotFound;

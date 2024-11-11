@@ -1,6 +1,8 @@
+import { Layoud } from "../../Layoud";
+
 const SingIn = ()=>{
     return(
-        <>SingIn</>
+        <Layoud>SingIn</Layoud>
     );
 }
 export default SingIn;
