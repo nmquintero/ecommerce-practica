@@ -1,6 +1,8 @@
+import { Layoud } from "../../Layoud";
+
 const MyOrder = ()=>{
     return(
-        <>My Order</>
+        <Layoud>My Order</Layoud>
     );
 }
 export default MyOrder;

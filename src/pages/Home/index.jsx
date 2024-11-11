@@ -1,6 +1,8 @@
+import { Layoud } from "../../Layoud";
+
 const Home = ()=>{
     return(
-        <>Home</>
+        <Layoud>Home</Layoud>
     );
 }
 

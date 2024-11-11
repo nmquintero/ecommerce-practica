@@ -5,6 +5,7 @@ import MyOrder from "../MyOrder/index.jsx";
 import MyOrders from "../MyOrders/index.jsx";
 import NotFound from "../NotFound/index.jsx";
 import SingIn from "../SingIn/index.jsx";
+import { NavBar } from "../../Componentes/NavBar/index.jsx";
 
 const AppRoutes = ()=>{
     let routes = useRoutes([
@@ -22,7 +23,8 @@ function App() {
 
   return (
     <BrowserRouter>
-        <AppRoutes/>
+      <NavBar/>
+      <AppRoutes/>
     </BrowserRouter>
   )
 }
