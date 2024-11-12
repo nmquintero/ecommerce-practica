@@ -6,6 +6,7 @@ import MyOrders from "../MyOrders/index.jsx";
 import NotFound from "../NotFound/index.jsx";
 import SingIn from "../SingIn/index.jsx";
 import { NavBar } from "../../Componentes/NavBar/index.jsx";
+import { ShoppingCardProvider } from "../../Context/index.jsx";
 
 const AppRoutes = ()=>{
     let routes = useRoutes([
@@ -22,10 +23,12 @@ const AppRoutes = ()=>{
 function App() {
 
   return (
-    <BrowserRouter>
-      <NavBar/>
-      <AppRoutes/>
-    </BrowserRouter>
+    <ShoppingCardProvider>
+      <BrowserRouter>
+        <NavBar/>
+        <AppRoutes/>
+      </BrowserRouter>
+    </ShoppingCardProvider>
   )
 }
 
