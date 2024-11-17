@@ -7,6 +7,7 @@ import NotFound from "../NotFound/index.jsx";
 import SingIn from "../SingIn/index.jsx";
 import { NavBar } from "../../Componentes/NavBar/index.jsx";
 import { ShoppingCardProvider } from "../../Context/index.jsx";
+import { CheckoutSideMenu } from "../../Componentes/CheckoutSideMenu/index.jsx";
 
 const AppRoutes = ()=>{
     let routes = useRoutes([
@@ -26,6 +27,7 @@ function App() {
     <ShoppingCardProvider>
       <BrowserRouter>
         <NavBar/>
+        <CheckoutSideMenu/>
         <AppRoutes/>
       </BrowserRouter>
     </ShoppingCardProvider>
