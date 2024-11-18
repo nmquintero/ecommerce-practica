@@ -16,7 +16,6 @@ export const ProductDetail = () => {
           className='h-6 w-6 text-black cursor-pointer'></XMarkIcon>
         </div>
         
-          {console.log(context.productToShow)}
           <figure className='px-6'>
             <img
               className='w-full h-full rounded-lg' 
