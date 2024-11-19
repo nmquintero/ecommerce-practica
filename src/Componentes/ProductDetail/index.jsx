@@ -9,7 +9,7 @@ export const ProductDetail = () => {
   return (
     <aside 
     className={`${context.isDetailOpem ? 'flex' : 'hidden'} product-detail flex-col fixed right-0 border border-black rounded-lg bg-white z-10`}>
-        <div className='flex justify-between items-center'>
+        <div className='flex justify-between items-center overflow-y-auto'>
           <h2 className='font-medium text-lg p-6'>Details</h2>
           <XMarkIcon 
           onClick={()=>context.closeProductDetail()}
