@@ -7,16 +7,20 @@ export const ShoppingCardProvider = ({children})=>{
     const [count, setCount] = useState(0)
     // Shoping card - add products to card
     const [cardProduct, setCardProduct] = useState([])
+    // Shoping card - Order
+    const [order, setOrder] = useState([])
     // Product details - Open/Clouse
     const [isDetailOpem, setIsDetailOpem] = useState(false)
     const openProductDetail = ()=>setIsDetailOpem(true)
     const closeProductDetail = ()=>setIsDetailOpem(false)
-    // Checkout side menu - Open/Clouse
+    // Checkout side menu - Open/Close
     const [isCheckoutSideMenuOpen, setIsCheckoutSideMenuOpen] = useState(false)
     const openCheckoutSideMenuOpen = ()=>setIsCheckoutSideMenuOpen(true)
     const closeCheckoutSideMenuOpen = ()=>setIsCheckoutSideMenuOpen(false)
     // Product Detail - Show product
     const [productToShow, setProductToShow] = useState({})
+
+    
 
     return(
         <ShoppingCardContext.Provider value={{
@@ -26,12 +30,14 @@ export const ShoppingCardProvider = ({children})=>{
             closeProductDetail,
             isDetailOpem,
             productToShow,
-            setProductToShow,
+            setProductToShow,   
             cardProduct,
             setCardProduct,
             isCheckoutSideMenuOpen,
             openCheckoutSideMenuOpen,
-            closeCheckoutSideMenuOpen
+            closeCheckoutSideMenuOpen,
+            order,
+            setOrder
         }}>
             {children}
         </ShoppingCardContext.Provider>
