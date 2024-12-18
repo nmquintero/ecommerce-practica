@@ -21,8 +21,9 @@ export const ShoppingCardProvider = ({children})=>{
     const [productToShow, setProductToShow] = useState({})
     // Get products from API
     const [products, setProducts] = useState(null);
+    const [filteredProducts, setFilteredProducts] = useState(null)
     // Get products by tytle 
-    const [searchByTytle, setSearchByTitle] = useState(null)
+    const [searchByTitle, setSearchByTitle] = useState(null)
     
     useEffect(()=>{
             const API = 'https://api.escuelajs.co/api/v1'
@@ -38,8 +39,14 @@ export const ShoppingCardProvider = ({children})=>{
             fetchData();
         },[]);
 
-    console.log(searchByTytle);
+    const filteredProductsByTitle = (products, searchByTytle)=>{
+        return products?.filter(product => product.title.toLowerCase().includes(searchByTitle.toLowerCase()))
+    }
     
+    useEffect(()=>{
+        if(searchByTitle) setFilteredProducts(filteredProductsByTitle(products, searchByTitle));
+    },[products, searchByTitle]);
+        
 
     return(
         <ShoppingCardContext.Provider value={{
@@ -59,8 +66,9 @@ export const ShoppingCardProvider = ({children})=>{
             setOrder,
             products,
             setProducts,
-            searchByTytle,
-            setSearchByTitle
+            searchByTitle,
+            setSearchByTitle,
+            filteredProducts
         }}>
             {children}
         </ShoppingCardContext.Provider>

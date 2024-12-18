@@ -37,12 +37,12 @@ export const CheckoutSideMenu = () => {
           </div>
         </div>
         <div className="px-6 overflow-y-auto flex-1">
-          {context.cardProduct?.map(product=>(
+          {context.cardProduct?.length > 0 && context.cardProduct?.map(product=>(
             <OrderCard
-                id={product.id}
-                title={product.title}
-                imageUrl={product.images?.[0]}
-                price={product.price}
+                id={product?.id}
+                title={product?.title}
+                imageUrl={product?.images?.[0]}
+                price={product?.price}
                 handleDeleteProduct={handleDeleteProduct}
             />
           ))}
