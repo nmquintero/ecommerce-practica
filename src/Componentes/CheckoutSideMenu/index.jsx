@@ -23,6 +23,7 @@ export const CheckoutSideMenu = () => {
       }
       context.setOrder([...context.order, orderToAdd])
       context.setCardProduct([])
+      context.setSearchByTitle(null)
   }
   
   return (

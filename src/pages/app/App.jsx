@@ -12,6 +12,11 @@ import { CheckoutSideMenu } from "../../Componentes/CheckoutSideMenu/index.jsx";
 const AppRoutes = ()=>{
     let routes = useRoutes([
         {path:'/',element:<Home/>},
+        {path:'/clothes',element:<Home/>},
+        {path:'/electronics',element:<Home/>},
+        {path:'/furnitures',element:<Home/>},
+        {path:'/toys',element:<Home/>},
+        {path:'/other',element:<Home/>},
         {path:'/myaccound',element:<MyAccound/>},
         {path:'/myorder',element:<MyOrder/>},
         {path:'/myorders',element:<MyOrders/>},

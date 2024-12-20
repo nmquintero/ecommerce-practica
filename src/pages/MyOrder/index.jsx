@@ -8,9 +8,7 @@ import { Link } from 'react-router-dom'
 const MyOrder = ()=>{
   const context = useContext(ShoppingCardContext)
   const currentPath = window.location.pathname
-  console.log(currentPath)
   let index = currentPath.substring(currentPath.lastIndexOf('/') + 1)
-  console.log(index)
   if (index === 'last') index = context.order?.length - 1
 
     const handleDeleteProduct = (id)=>{
